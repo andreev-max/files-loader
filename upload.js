@@ -63,7 +63,7 @@ export function upload(selector, options = {}) {
 			const reqder = new FileReader();
 
 			reqder.onload = (event) => {
-				console.log(event.target);
+				// console.log(event.target);
 				const src = event.target.result;
 
 				const previewItem = document.createElement('div');
@@ -95,7 +95,7 @@ export function upload(selector, options = {}) {
 	};
 
 	const removeHandler = (event) => {
-		console.log(event.target.dataset);
+		// console.log(event.target.dataset);
 		if (!event.target.dataset.name) {
 			return;
 		}
@@ -114,19 +114,20 @@ export function upload(selector, options = {}) {
 		setTimeout(() => {
 			block.remove();
 		}, 350);
-		console.log(block);
+		// console.log(block);
 	};
 
 	function clearPreview(elem) {
+    elem.style.bottom = '0px'
 		elem.innerHTML = `<div class='preview-info-progress'>
     </div>`;
 	}
 
 	function uploadHandler() {
 		preview.querySelectorAll('.preview-remove').forEach((elem) => elem.remove());
-		const previewInfos = preview.querySelectorAll('.preview-info');
-		previewInfos.forEach(clearPreview);
-		onUpload(files);
+		const previewInfo = preview.querySelectorAll('.preview-info');
+		previewInfo.forEach(clearPreview);
+		onUpload(files, previewInfo);
 	}
 
 	open.addEventListener('click', triggerInput);

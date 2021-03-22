@@ -19,5 +19,8 @@
   "homepage": "https://github.com/nAzdAc/files-loader#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "firebase": "^8.3.1"
   }
 }

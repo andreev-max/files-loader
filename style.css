@@ -133,7 +133,9 @@ input[type=file] {
   top: 0;
   bottom: 0;
   background: #42b983;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
   transition: width 0.2s;
-  width: 30%;
 }
