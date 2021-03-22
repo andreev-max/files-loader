@@ -1,4 +1,4 @@
-#  Files Uploader #
+#  Files Uploader
 
 Open this project  [link](https://flies-loader.netlify.app/)
 
@@ -9,7 +9,7 @@ Open this project  [link](https://flies-loader.netlify.app/)
 1. parcel-bundler
 2. firebase
 
-### Screenshoots: ###
+### Screenshoots:
 
 ![first load](./assets/first.png)
 
