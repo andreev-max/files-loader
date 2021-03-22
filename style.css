@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background: #666;
@@ -15,7 +20,7 @@ body {
   border-radius: 6px;
   background-color: #fff;
   padding: 1rem;
-  box-shadow: 2px 3px 10px (rgba(0, 0, 0, .2));
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
@@ -46,4 +51,89 @@ body {
 .btn:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: .5rem;
+}
+
+.preview-image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .5rem;
+  margin-right: .5rem;
+  overflow: hidden;
+}
+
+.preview-image.removing {
+  transform: scale(0);
+  transition: transform .4s;
+}
+
+.preview-image img {
+  background: #666;
+  width: 180px;
+  height: auto;
+}
+
+.preview-image:hover .preview-remove {
+  opacity: 1;
+}
+
+.preview-image:hover .preview-info {
+  bottom: 0px;
+}
+
+.preview-remove {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+  background: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+
+.preview-info {
+  background: #777;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -30px;
+  height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  transition: bottom .2s;
+}
+
+.preview-info-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #42b983;
+  text-align: center;
+  transition: width 0.2s;
+  width: 30%;
 }
